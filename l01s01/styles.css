@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: #84a4d6;
+  font: 16px Roboto, sans-serif;
+  overflow: auto;
+}
+
+.page {
+  display: flex;
+}
+
+.tile {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px 0px rgba(55,55,55,.4);
+  display: block;
+  margin: 100px auto;
+}
+
+.subscriptions {
+  display: flex;
+  padding: 30px;
+}
+
+.subscription {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.subscription-logo {
+  width: 64px;
+}
+
+.subscription-title {
+  color: #536fd9;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.subscription-description {
+  color: #888;
+  font-size: .8em;
+}
+
+.subscription-price {
+  color: #536fd9;
+  line-height: 2.2em;
+}
+
+.price-currency {
+  font-weight: 700;
+  vertical-align: text-bottom;
+}
+
+.price-amount {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.price-time {
+  margin-left: .3em;
+}
