@@ -18,21 +18,28 @@ body {
 .tile {
   background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 10px 30px 0px rgba(55,55,55,.4);
+  box-shadow: 0 10px 30px 0px rgba(30,30,30,.4);
   display: block;
   margin: 100px auto;
 }
 
 .subscriptions {
+  align-items: flex-start;
   display: flex;
   padding: 30px;
 }
 
 .subscription {
-  flex-basis: 0;
-  flex-grow: 1;
-  padding: 10px;
+  box-sizing: border-box;
+  padding: 10px 40px;
   text-align: center;
+  width: 280px;
+}
+
+.subscription:hover {
+  cursor: pointer;
+  background: rgba(200,200,200,.2);
+  border-radius: 4px;
 }
 
 .subscription-logo {
@@ -42,17 +49,20 @@ body {
 .subscription-title {
   color: #536fd9;
   letter-spacing: .2em;
+  margin: 2em 0 1em;
   text-transform: uppercase;
 }
 
 .subscription-description {
   color: #888;
   font-size: .8em;
+  margin: 1em 0;
 }
 
 .subscription-price {
   color: #536fd9;
   line-height: 2.2em;
+  margin: 1em 0 0;
 }
 
 .price-currency {
