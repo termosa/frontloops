@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url('img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: 13px/19px Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Checkout */
+
+.checkout {
+  background: #fff;
+  border-radius: 4px;
+  margin: 100px auto;
+  overflow: hidden;
+  width: 340px;
+}
+
+.checkout-header {
+  padding: 1rem 0;
+}
+
+.checkout-pagination {
+  font-size: 0;
+  line-height: 0;
+  padding: .22rem;
+  text-align: center;
+}
+
+.checkout-pagination_step {
+  background: #dedede;
+  border-radius: 50%;
+  display: inline-block;
+  height: 6px;
+  margin: 0 .23rem;
+  width: 6px;
+}
+
+.checkout-pagination_step_active {
+  background: #aaa;
+}
+
+.checkout-title {
+  color: #444;
+  font-size: 1.66em;
+  font-weight: 500;
+  margin: .84em 0 .7em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.checkout-method_item {
+  border-top: 1px solid #ddd;
+}
+
+.checkout-button {
+  background: #5789e0;
+  border: 0;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  outline: 0;
+  padding: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.checkout-button:hover {
+  background: #6091e4;
+}
+
+.checkout-button:active {
+  padding: 1.02rem;
+  margin-top: .18rem;
+}
+
+.checkout-button_next:after {
+  background: url(img/arrow.svg) no-repeat center;
+  content: '';
+  display: inline-block;
+  height: 14px;
+  margin-top: -1px;
+  transform: scale(0.6);
+  vertical-align: middle;
+  width: 18px;
+}
+
+/* Payment Method */
+
+.payment_method {
+  color: #999;
+  cursor: pointer;
+  display: block;
+  padding: .93rem 1.1rem;
+}
+
+.payment_method:hover {
+  background: #f2f2f2;
+}
+
+.payment_method-icon,
+.payment_method-label,
+.payment_method-checkmark {
+  vertical-align: middle;
+}
+
+.payment_method-icon {
+  height: 1.6rem;
+  margin: 0 .8rem;
+}
+
+.payment_method-label {
+  display: inline-block;
+  font-size: .9rem;
+  line-height: 1rem;
+  margin: 0 .4rem;
+  text-transform: uppercase;
+}
+
+.payment_method-checkmark {
+  background: url('img/check.svg') no-repeat center;
+  display: none;
+  float: right;
+  height: 1.5rem;
+  width: .9rem;
+}
+
+.payment_method-input {
+  display: none;
+}
+
+.payment_method-input:checked ~ .payment_method-label {
+  color: #222;
+}
+
+.payment_method-input:checked ~ .payment_method-checkmark {
+  display: inline-block;
+}

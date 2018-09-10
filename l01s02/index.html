@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <form class="checkout">
+    <header class="checkout-header">
+      <ol class="checkout-pagination">
+        <li class="checkout-pagination_step checkout-pagination_step_active step_1"></li>
+        <li class="checkout-pagination_step step_2"></li>
+        <li class="checkout-pagination_step step_3"></li>
+      </ol>
+      <h2 class="checkout-title">Payment Method</h2>
+    </header>
+    <ul class="checkout-method">
+      <li class="checkout-method_item">
+        <label class="payment_method" for="method_visa">
+          <input class="payment_method-input" name="method" type="radio" id="method_visa" />
+          <img class="payment_method-icon" src="img/visa.svg" alt="Visa">
+          <span class="payment_method-label">Visa</span>
+          <i class="payment_method-checkmark"></i>
+        </label>
+      </li>
+      <li class="checkout-method_item">
+        <label class="payment_method" for="method_mastercard">
+          <input class="payment_method-input" name="method" type="radio" id="method_mastercard" />
+          <img class="payment_method-icon" src="img/mastercard.svg" alt="Visa">
+          <span class="payment_method-label">MasterCard</span>
+          <i class="payment_method-checkmark"></i>
+        </label>
+      </li>
+      <li class="checkout-method_item">
+        <label class="payment_method" for="method_maestro">
+          <input class="payment_method-input" name="method" type="radio" id="method_maestro" />
+          <img class="payment_method-icon" src="img/maestro.svg" alt="Visa">
+          <span class="payment_method-label">Maestro</span>
+          <i class="payment_method-checkmark"></i>
+        </label>
+      </li>
+    </ul>
+    <button class="checkout-button checkout-button_next" type="button">Next Step</button>
+  </form>
+
+</body>
+</html>
