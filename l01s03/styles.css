@@ -1,0 +1,33 @@
+body {
+  font: 13px/19px Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.receipt {
+  width: 600px;
+  margin: 100px auto;
+  border-radius: 4px;
+  padding: 30px 60px 190px;
+  box-sizing: border-box;
+  outline: 1px solid gold;
+}
+
+.receipt-account_link {
+  background-image: url(img/account.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 50%;
+  border: 1px solid red;
+  display: inline-block;
+  font-size: 0;
+  height: 40px;
+  width: 40px;
+}
