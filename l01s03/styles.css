@@ -1,4 +1,5 @@
 body {
+  background: #00a185;
   font: 13px/19px Roboto, sans-serif;
   margin: 0;
   padding: 0;
@@ -11,12 +12,33 @@ ol {
 }
 
 .receipt {
-  width: 600px;
-  margin: 100px auto;
+  background-color: #fff;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   border-radius: 4px;
-  padding: 30px 60px 190px;
+  box-shadow: 0 5px 30px 0 rgba(50, 50, 50, .5);
   box-sizing: border-box;
-  outline: 1px solid gold;
+  color: #111;
+  margin: 100px auto;
+  padding: 30px 70px 170px;
+  position: relative;
+  width: 600px;
+  z-index: 0;
+}
+
+.receipt:after {
+  background-image: url('img/bicycle.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  bottom: 0;
+  content: '';
+  height: 280px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 
 .receipt-account_link {
@@ -25,9 +47,58 @@ ol {
   background-repeat: no-repeat;
   background-size: 60%;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 0 0 #eee;
   display: inline-block;
+  float: right;
   font-size: 0;
   height: 40px;
+  margin-top: .55rem;
+  transition: .2s ease box-shadow;
   width: 40px;
+}
+
+.receipt-account_link:hover {
+  box-shadow: 0 0 0 .3rem #eee;
+}
+
+.receipt-title {
+  font-size: 1.38rem;
+  font-weight: 700;
+  margin: 1.22rem 0;
+}
+
+.receipt-message {
+  color: #aaa;
+  font-size: .86rem;
+  font-weight: 600;
+  margin: 1.4rem 0;
+}
+
+.receipt-bill {
+  margin-top: 2.42rem;
+}
+
+.bill {
+  font-size: 1rem;
+}
+
+.bill-item {
+  display: flex;
+  margin: 1.82rem 0;
+}
+
+.bill-item:last-child {
+  font-size: 1.25rem;
+}
+
+.bill-label {
+  color: #777;
+  font-weight: 500;
+}
+
+.bill-price {
+  font-size: 1.24rem;
+  font-weight: 700;
+  margin-left: auto;
 }
