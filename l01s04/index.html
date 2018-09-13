@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <div class="chat">
+    <header class="chat-header">
+      <span class="chat-name chat-status">Mark Zuckerberg</span>
+      <button type="button" class="chat-action_close">close</button>
+    </header>
+    <main class="chat-body">
+      <ol class="chat-messages messages">
+        <li class="messages-item messages-date">
+          <span class="messages-date_text">today</span>
+        </li>
+        <li class="messages-item message message-sent">
+          <time class="message-time">10:53</time>
+          <p class="message-text">Hi, Mark! I made a new design for Messenger App.</p>
+        </li>
+        <li class="messages-item message message-received">
+          <time class="message-time">10:57</time>
+          <p class="message-text">Hi, Mark! I made a new design for Messenger App.</p>
+        </li>
+        <li class="messages-item message message-sent">
+          <time class="message-time">11:03</time>
+          <p class="message-text">But Mark...</p>
+        </li>
+        <li class="messages-item message message-system">
+          <p class="message-text">You were blocked by the user.</p>
+        </li>
+      </ol>
+      <form class="chat-form" onsubmit="event.preventDefault()">
+        <input class="chat-form_message" type="text" placeholder="Enter your message">
+        <button class="chat-form_submit" type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
