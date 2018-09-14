@@ -39,12 +39,19 @@ const setupSolution = async zip => {
 
 const setupTask = async zip => {
   const [_, lesson, step] = zip.match(/(\d+).+(\d+)/)
-  const taskPath = `l${lesson.padStart(2, 0)}s${step.padStart(2, 0)}/`
+  const codePath = `l${lesson.padStart(2, 0)}s${step.padStart(2, 0)}/`
+  const taskPath = `tasks/l${lesson.padStart(2, 0)}s${step.padStart(2, 0)}/`
   const writing = (await decompress(zip))
     .filter(entry => entry.type === 'file')
-    .map(f => go.writeFile(taskPath + f.path.slice('assets/'.length), f.data))
+    .map(f => {
+      if (f.path.startsWith('assets/design/')) {
+        go.writeFile(taskPath + f.path.slice('assets/design/'.length), f.data)
+      } else {
+        go.writeFile(codePath + f.path.slice('assets/'.length), f.data)
+      }
+    })
   await Promise.all(writing)
-  console.log('Task is delivered to', taskPath)
+  console.log('Task is delivered to', taskPath, 'and code is in', codePath)
 }
 
 const loadSolution = {
