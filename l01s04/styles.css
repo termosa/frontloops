@@ -1,4 +1,5 @@
 html, body {
+  box-sizing: border-box;
   height: 100%;
 }
 
@@ -7,19 +8,19 @@ html {
 }
 
 body {
+  background: linear-gradient(0deg, #8aaac8, #cedde9);
   margin: 0;
   padding: 100px 0;
-  background: linear-gradient(0deg, #8aaac8, #cedde9);
 }
 
 /* Chat */
 
 .chat {
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(50, 50, 50, .2);
   display: block;
   margin: 0 auto;
-  background: #fff;
   width: 400px;
-  box-shadow: 0 1px 8px rgba(50, 50, 50, .2);
 }
 
 .chat-header {
@@ -38,10 +39,10 @@ body {
   border-radius: 50%;
   content: '';
   display: inline-block;
-  height: 5px;
+  height: 6px;
   margin: 0 1rem .1rem 0;
   vertical-align: middle;
-  width: 5px;
+  width: 6px;
 }
 
 .chat-action_close {
@@ -56,29 +57,30 @@ body {
   font-size: 0;
   height: 1.1rem;
   margin: 1px 1px 0 auto;
+  opacity: .7;
   padding: 0;
+  transition: .2s ease opacity;
   width: 1.1rem;
-  transition: .2s ease transform;
 }
 
 .chat-action_close:hover {
-  transform: scale(1.1);
+  opacity: 1;
 }
 
 .chat-messages {
+  color: #9a9a9a;
   height: 366px;
   list-style: none;
   margin: 0;
   overflow: hidden auto;
   padding: 0;
-  color: #9a9a9a;
 }
 
 .chat-form {
+  border-top: 1px solid #eee;
+  font-size: 0;
   margin: 0 20px;
   padding: 14px 0;
-  font-size: 0;
-  border-top: 1px solid #eee;
 }
 
 .chat-form_message,
@@ -86,29 +88,24 @@ body {
   background: transparent;
   border: 0;
   box-shadow: none;
+  box-sizing: border-box;
   font-size: 1.1rem;
   outline: 0;
   padding: 0;
   padding: 3px 2px;
-  box-sizing: border-box;
 }
 
 .chat-form_message {
   width: 87%;
-  font-weight: 600;
-  color: #9a9a9a;
-}
-
-.chat-form_message::placeholder {
-  color: #c3c3c3;
 }
 
 .chat-form_submit {
+  color: #6a97d8;
   cursor: pointer;
-  width: 13%;
-  color: #b6cbed;
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: .1rem;
   text-transform: uppercase;
+  width: 13%;
 }
 
 .chat-form_submit:hover {
@@ -122,29 +119,29 @@ body {
 }
 
 .messages-date {
-  text-align: center;
+  overflow: hidden;
   overflow: hidden;
   padding: 8px 0;
+  text-align: center;
   text-transform: uppercase;
-  overflow: hidden;
 }
 
 .messages-date_text {
   display: inline-block;
-  position: relative;
   padding: 0 .7rem;
+  position: relative;
 }
 
 .messages-date_text:before,
 .messages-date_text:after {
+  background: #eee;
   content: '';
   display: block;
-  position: absolute;
-  vertical-align: middle;
   height: 1px;
-  width: 400px;
-  background: #eee;
+  position: absolute;
   top: 50%;
+  vertical-align: middle;
+  width: 400px;
 }
 
 .messages-date_text:before {
@@ -158,13 +155,12 @@ body {
 /* Message */
 
 .message:after {
+  clear: both;
   content: '';
   display: table;
-  clear: both;
 }
 
-.message-received,
-.message-system {
+.message-received .message-time {
   text-align: right;
 }
 
@@ -173,51 +169,54 @@ body {
 }
 
 .message-text {
-  color: #000;
-  font-weight: 600;
   border-radius: 4px;
-  margin: 0;
-  padding: .7rem;
-  max-width: 75%;
   box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  font-weight: 400;
+  margin: 0;
+  max-width: 75%;
+  padding: .7rem;
   position: relative;
 }
 
 .message-sent .message-text:after,
 .message-received .message-text:after {
+  border: 4px solid red;
   content: '';
   display: block;
   position: absolute;
   top: 0;
-  border: 4px solid red;
 }
 
 .message-sent .message-text {
-  background: #f3f6fb;
+  background: #e6edf6;
   border-top-left-radius: 0;
 }
 
 .message-sent .message-text:after {
-  left: -8px;
-  border-color: #f3f6f6;
-  border-left-color: transparent;
   border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #e6edf6;
+  border-top-color: #e6edf6;
+  left: -8px;
 }
 
 .message-received .message-text {
-  float: right;
   background: #f2f2f2;
   border-top-right-radius: 0;
+  float: right;
 }
 
 .message-received .message-text:after {
-  right: -8px;
-  border-color: #f2f2f2;
-  border-right-color: transparent;
   border-bottom-color: transparent;
+  border-left-color: #f2f2f2;
+  border-right-color: transparent;
+  border-top-color: #f2f2f2;
+  right: -8px;
 }
 
 .message-system .message-text {
-  float: right;
   background: #ffc2c0;
+  float: right;
 }
